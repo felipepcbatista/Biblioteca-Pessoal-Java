@@ -14,16 +14,16 @@ Sistema de linha de comando (CLI) para gerenciar uma pequena biblioteca pessoal,
 * ano (int)
 * status -> _DISPONÍVEL | EMPRESTADO_
 * Regras
-** Um livro só pode estar em um status de cada vez.
-** Se EMPRESTADO, existe 1 empréstimo aberto vinculado.
+* * Um livro só pode estar em um status de cada vez.
+* * Se EMPRESTADO, existe 1 empréstimo aberto vinculado.
 
 ### 2.2 Usuário
 * id (long)
 * nome (String)
 * email (String, formato simples _x@y_)
 * Regras
-** O e-mail deve ser válido.
-** Usuário não pode pegar novo livro se tiver empréstimo em atraso aberto.
+* * O e-mail deve ser válido.
+* * Usuário não pode pegar novo livro se tiver empréstimo em atraso aberto.
 
 ### 2.3 Empréstimo
 * id (long)
@@ -34,8 +34,8 @@ Sistema de linha de comando (CLI) para gerenciar uma pequena biblioteca pessoal,
 * dataDevolucao (LocalDate | null)
 
 * Regras
-** Enquanto _dataDevolucao == null_, empréstimo está ABERTO.
-** Se _dataDevolucao != null_, está DEVOLVIDO.
+* * Enquanto _dataDevolucao == null_, empréstimo está ABERTO.
+* * Se _dataDevolucao != null_, está DEVOLVIDO.
 
 ---
 
@@ -52,33 +52,34 @@ Sistema de linha de comando (CLI) para gerenciar uma pequena biblioteca pessoal,
 ### 4.1 Emprestar livro
 
 * Pré-condições:
-** Livro existe e está DISPONIVEL.
-** Usuário existe e não tem atraso aberto.
+* * Livro existe e está DISPONIVEL.
+* * Usuário existe e não tem atraso aberto.
 
 * Fluxo:
-** Calcular data prevista (+7 dias).
-** Criar empréstimo.
-** Marcar livro como EMPRESTADO.
+* * Calcular data prevista (+7 dias).
+* * Criar empréstimo.
+* * Marcar livro como EMPRESTADO.
 
 * Pós-condições:
-** Empréstimo salvo como ABERTO.
-** Livro indisponível.
+* * Empréstimo salvo como ABERTO.
+* * Livro indisponível.
 
 ### 4.2 Devolver livro
 
 * Pré-condições:
-** Empréstimo existe e está ABERTO.
+* * Empréstimo existe e está ABERTO.
 
 * Fluxo:
-** Registrar data de devolução.
-** Calcular multa (se hoje > dataPrevista).
-** Marcar livro como DISPONIVEL.
+* * Registrar data de devolução.
+* * Calcular multa (se hoje > dataPrevista).
+* * Marcar livro como DISPONIVEL.
 
 * Pós-condições:
-** Empréstimo salvo como DEVOLVIDO.
-** Multa registrada.
+* * Empréstimo salvo como DEVOLVIDO.
+* * Multa registrada.
 
 ### 4.3 Relatórios
 
 * Listar livros disponíveis.
 * Listar empréstimos em atraso.
+
