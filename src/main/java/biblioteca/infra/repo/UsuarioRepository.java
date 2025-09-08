@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface UsuarioRepository{
+
     Usuario salvar (Usuario user);
     Optional<Usuario> buscarPorId (long id);
     List<Usuario> listar ();
