@@ -1,6 +1,7 @@
 package biblioteca.domain;
 
 import java.util.regex.Pattern;
+import biblioteca.infra.exceptions.EmailInvalidoException;
 
 public class Usuario{
 
