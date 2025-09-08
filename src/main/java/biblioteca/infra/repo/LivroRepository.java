@@ -9,6 +9,5 @@ public interface LivroRepository{
     Livro salvar (Livro livro);
     Optional<Livro> buscarPorId (long id);
     List<Livro> listar();
-    void removerLivro (long id);
     long proximoId ();
 }

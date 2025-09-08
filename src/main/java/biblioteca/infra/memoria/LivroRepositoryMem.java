@@ -33,9 +33,4 @@ public class LivroRepositoryMem implements LivroRepository{
     public List<Livro> listar(){
         return new ArrayList<>(db.values());
     }
-
-    @Override
-    public void removerLivro (long id){
-        db.remove(id);
-    }
 }
