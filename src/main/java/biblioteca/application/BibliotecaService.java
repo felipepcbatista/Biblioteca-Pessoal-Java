@@ -1,12 +1,7 @@
 package biblioteca.application;
 
-import biblioteca.domain.Livro;
-import biblioteca.domain.Usuario;
-import biblioteca.domain.Emprestimo;
-
-import biblioteca.infra.repo.LivroRepository;
-import biblioteca.infra.repo.UsuarioRepository;
-import biblioteca.infra.repo.EmprestimoRepository;
+import biblioteca.domain.*;
+import biblioteca.infra.repo.*;
 
 import biblioteca.infra.exceptions.LivroNaoEncontradoException;
 import biblioteca.infra.exceptions.LivroIndisponivelException;
